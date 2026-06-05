@@ -1,0 +1,32 @@
+{
+  "name": "NLP & LLM Research GPU",
+
+  "image": "mcr.microsoft.com/devcontainers/python:3-3.11-trixie",
+
+  "runArgs": [
+    "--gpus",
+    "all"
+  ],
+
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/postfinance/devcontainer-features/git-lfs:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ]
+    }
+  },
+
+  "postCreateCommand": "pip install --upgrade pip && pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 && pip install transformers datasets accelerate peft trl sentencepiece tokenizers evaluate nltk spacy pandas numpy scipy scikit-learn matplotlib seaborn plotly jupyter notebook ipykernel pyarrow tqdm joblib faiss-cpu langchain langchain-community langchain-core langchain-openai llama-index openai anthropic huggingface_hub wandb python-dotenv rich",
+
+  "remoteUser": "vscode"
+}
