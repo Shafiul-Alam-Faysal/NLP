@@ -1,76 +1,10 @@
-# Deep Learning
-torch
-torchvision
-torchaudio
-
-# Hugging Face
-transformers
-datasets
-accelerate
-peft
-trl
-sentencepiece
-tokenizers
-evaluate
-huggingface_hub
-safetensors
-optimum
-
-# NLP
-nltk
-spacy
-spacy-lookups-data
-gensim
-rapidfuzz
-fuzzywuzzy
-python-Levenshtein
-distance
-wordcloud
-
-# Classical ML
+streamlit
 numpy
 pandas
-scipy
 scikit-learn
-imbalanced-learn
-xgboost
-lightgbm
-catboost
-
-# Visualization
-matplotlib
-plotly
-seaborn
-
-# Experiment Tracking
-tensorboard
-mlflow
-optuna
-
-# Quantization
-bitsandbytes
-
-# RAG
-faiss-cpu
-chromadb
-rank-bm25
-pymupdf
-unstructured
-
-# API
-fastapi
-uvicorn
-pydantic
-
-# Notebook
-jupyter
-notebook
-ipykernel
-pyarrow
-
-# Utilities
-tqdm
 joblib
-rich
-python-dotenv
-wandb
+nltk
+beautifulsoup4
+distance
+fuzzywuzzy
+python-Levenshtein
