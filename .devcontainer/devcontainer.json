@@ -1,31 +1,15 @@
 {
-  "name": "NLP & LLM Research GPU",
+  "name": "Quora Duplicate Question Detection",
 
-  "image": "mcr.microsoft.com/devcontainers/python:3-3.11-trixie",
+  "build": {
+    "dockerfile": "../../../ai-devcontainer/Dockerfile",
+    "context": "../../../ai-devcontainer"
+  },
 
   "runArgs": [
     "--gpus",
     "all"
   ],
 
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/postfinance/devcontainer-features/git-lfs:1": {}
-  },
-
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "ms-toolsai.jupyter",
-        "GitHub.copilot",
-        "GitHub.copilot-chat"
-      ]
-    }
-  },
-
-  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 && python -m pip install -r requirements.txt && python -m nltk.downloader punkt stopwords wordnet omw-1.4 averaged_perceptron_tagger punkt_tab && python -m spacy download en_core_web_sm",
   "remoteUser": "vscode"
 }
