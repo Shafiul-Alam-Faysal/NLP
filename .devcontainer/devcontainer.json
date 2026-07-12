@@ -1,15 +1,24 @@
 {
   "name": "Quora Duplicate Question Detection",
 
-  "build": {
-    "dockerfile": "../../../ai-devcontainer/Dockerfile",
-    "context": "../../../ai-devcontainer"
-  },
+  "image": "ai-dev-base",
 
   "runArgs": [
     "--gpus",
     "all"
   ],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ]
+    }
+  },
 
   "remoteUser": "vscode"
 }
